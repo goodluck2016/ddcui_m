@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>DDCUI</title>
+    <link rel="stylesheet" href="css/ddcui.css">
+    <link rel="stylesheet" href="css/example.css">
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="font_awesome/css/font-awesome.css" >
+	<style>
+	.container {padding-top:44px;}
+	a.nav{position:fixed;top:0;z-index:9999;display:block;width:100%;padding:3%;line-height:1;font-size:14px;background-color: #fbf9fe;border-bottom: 1px solid #eee;color:#666;}
+	.search_result{position:relative;padding:20px;line-height:14px;font-size:14px;color:#999;text-align:center;}
+	.search_result span{position:relative;background:#f8f8f8;z-index:2;padding:0 10px;}
+	.search_line{position:absolute;top:27px;left:3%;z-index:1;width:94%;height:1px;background:#e0e0e0;}
+		.tt p{position:relative}
+		.tt p:before{content:'';position:absolute;top:0;left:-20px;width:20px;height:20px;background: url(images/i_bq.png) no-repeat 0 2px / 16px auto;}
+	</style>
+</head>
+<body ontouchstart="">
+    <div class="container" id="container">
+	
+	<!--<div class="home">
+	<div class="hd">
+		<h1 class="page_title">DDCUI</h1>
+		<p class="page_desc">为Web服务量身设计</p>
+	</div>
+	<div class="bd">
+		<div class="ddcui_grids">
+			<a href="https://ddcui.io/#/button" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_button"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Button
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/cell" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_cell"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Cell
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/toast" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_toast"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Toast
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/dialog" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_dialog"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Dialog
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/progress" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_progress"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Progress
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/msg" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_msg"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Msg
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/article" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_article"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Article
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/actionsheet" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_actionSheet"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					ActionSheet
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/icons" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_icons"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Icons
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/panel" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_panel"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Panel
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/tab" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_tab"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					Tab
+				</p>
+			</a>
+			<a href="https://ddcui.io/#/searchbar" class="ddcui_grid">
+				<div class="ddcui_grid_icon">
+					<i class="icon icon_search_bar"></i>
+				</div>
+				<p class="ddcui_grid_label">
+					SearchBar
+				</p>
+			</a>
+		</div>
+	</div>
+	</div>-->
+	</div>
+	
+    <script type="text/html" id="tpl_home">
+	<div class="hd">
+		<h1 class="page_title">DDCUI</h1>
+		<p class="page_desc">为Web服务量身设计</p>
+	</div>
+	<div class="bd">
+		<div class="ddcui_grids">
+			<a href="#/button" class="ddcui_grid color-a1">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont square">&#xe62d;</i><!--icon_button -->
+				</div>
+				<p class="ddcui_grid_label">
+					Button
+				</p>
+			</a>
+			<a href="#/cell" class="ddcui_grid color-a2">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont liebiaoshitu">&#xe664;</i><!--icon_cell -->
+				</div>
+				<p class="ddcui_grid_label">
+					Cell
+				</p>
+			</a>
+			<a href="#/toast" class="ddcui_grid color-a3">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont squarecheckfill">&#xe62f;</i><!--icon_toast -->
+				</div>
+				<p class="ddcui_grid_label">
+					Toast
+				</p>
+			</a>
+			<a href="#/dialog" class="ddcui_grid color-b1">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont tuwenxiangqing">&#xe638;</i><!--icon_dialog -->
+				</div>
+				<p class="ddcui_grid_label">
+					Dialog
+				</p>
+			</a>
+			<a href="#/progress" class="ddcui_grid color-b2">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont">&#xe660;</i><!--icon_progress -->
+				</div>
+				<p class="ddcui_grid_label">
+					Progress
+				</p>
+			</a>
+			<a href="#/msg" class="ddcui_grid color-b3">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont zaixianzixun">&#xe654;</i><!--icon_msg -->
+				</div>
+				<p class="ddcui_grid_label">
+					Msg
+				</p>
+			</a>
+			<a href="#/article" class="ddcui_grid color-c1">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont wodedingdan1">&#xe613;</i><!--icon_article -->
+				</div>
+				<p class="ddcui_grid_label">
+					Article
+				</p>
+			</a>
+			<a href="#/actionsheet" class="ddcui_grid color-c2">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont bbgdatumoshi">&#xe665;</i><!--icon_actionSheet -->
+				</div>
+				<p class="ddcui_grid_label">
+					ActionSheet
+				</p>
+			</a>
+			<a href="#/icons" class="ddcui_grid color-c3">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont liulanlishi">&#xe636;</i><!--icon_icons -->
+				</div>
+				<p class="ddcui_grid_label">
+					Icons
+				</p>
+			</a>
+			<a href="#/panel" class="ddcui_grid color-d1">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont collection">&#xe625;</i><!--icon_panel -->
+				</div>
+				<p class="ddcui_grid_label">
+					Panel
+				</p>
+			</a>
+			<a href="#/tab" class="ddcui_grid color-d2">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont fenxiao">&#xe647;</i><!--icon_tab -->
+				</div>
+				<p class="ddcui_grid_label">
+					Tab
+				</p>
+			</a>
+			<a href="#/searchbar" class="ddcui_grid color-d3">
+				<div class="ddcui_grid_icon">
+					<i class="icon iconfont sousuo1">&#xe661;</i><!--icon_search_bar -->
+				</div>
+				<p class="ddcui_grid_label">
+					SearchBar
+				</p>
+			</a>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_button">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Button</h1>
+	</div>
+	<div class="bd spacing">
+
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_disabled ddcui_btn_primary">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_warn">确认</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_disabled ddcui_btn_warn">确认</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_orange">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_disabled ddcui_btn_orange">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_blue">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_disabled ddcui_btn_blue">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_default">按钮</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_disabled ddcui_btn_default">按钮</a>
+		<div class="button_sp_area">
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_plain_default">按钮</a>
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_plain_primary">按钮</a>
+
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_plain_orange">按钮</a>
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_plain_blue">按钮</a>
+
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_primary">按钮</a>
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_default">按钮</a>
+
+			<!--<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_orange">按钮</a>
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_orange">按钮</a>
+
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_blue">按钮</a>
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_mini ddcui_btn_blue">按钮</a>-->
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_cell">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Cell</h1>
+	</div>
+	<div class="bd">
+		<div class="ddcui_cells_title">带说明的列表项</div>
+		<div class="ddcui_cells">
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标题文字</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</div>
+		</div>
+		<div class="ddcui_cells_title">带图标、说明的列表项</div>
+		<div class="ddcui_cells">
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><img src="images/ddc.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标题文字</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</div>
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><img src="images/ddc.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标题文字</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</div>
+		</div>
+
+		<div class="ddcui_cells_title">带跳转的列表项</div>
+		<div class="ddcui_cells ddcui_cells_access">
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">
+				</div>
+			</a>
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">
+				</div>
+			</a>
+		</div>
+
+		<div class="ddcui_cells_title">带说明、跳转的列表项</div>
+		<div class="ddcui_cells ddcui_cells_access">
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</a>
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</a>
+
+		</div>
+
+		<div class="ddcui_cells_title">带图标、说明、跳转的列表项</div>
+		<div class="ddcui_cells ddcui_cells_access">
+
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_hd"><img src="images/ddc.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</a>
+			<a class="ddcui_cell" href="javascript:;">
+				<div class="ddcui_cell_hd"><img src="images/ddc.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">说明文字</div>
+			</a>
+		</div>
+
+		<div class="ddcui_cells_title">单选列表项</div>
+		<div class="ddcui_cells ddcui_cells_radio">
+			<label class="ddcui_cell ddcui_check_label" for="x11">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">
+					<input type="radio" class="ddcui_check" name="radio1" id="x11">
+					<span class="ddcui_icon_checked"></span>
+				</div>
+			</label>
+			<label class="ddcui_cell ddcui_check_label" for="x12">
+
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>cell standard</p>
+				</div>
+				<div class="ddcui_cell_ft">
+					<input type="radio" name="radio1" class="ddcui_check" id="x12" checked="checked">
+					<span class="ddcui_icon_checked"></span>
+				</div>
+			</label>
+		</div>
+		<div class="ddcui_cells_title">复选列表项</div>
+		<div class="ddcui_cells ddcui_cells_checkbox">
+			<label class="ddcui_cell ddcui_check_label" for="s11">
+				<div class="ddcui_cell_hd">
+					<input type="checkbox" class="ddcui_check" name="checkbox1" id="s11" checked="checked">
+					<i class="ddcui_icon_checked"></i>
+				</div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>standard is dealt for u.</p>
+				</div>
+			</label>
+			<label class="ddcui_cell ddcui_check_label" for="s12">
+				<div class="ddcui_cell_hd">
+					<input type="checkbox" name="checkbox1" class="ddcui_check" id="s12">
+					<i class="ddcui_icon_checked"></i>
+				</div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>standard is dealicient for u.</p>
+				</div>
+			</label>
+		</div>
+
+		<div class="ddcui_cells_title">开关</div>
+		<div class="ddcui_cells ddcui_cells_form">
+			<div class="ddcui_cell ddcui_cell_switch">
+				<div class="ddcui_cell_hd ddcui_cell_primary">标题文字</div>
+				<div class="ddcui_cell_ft">
+					<input class="ddcui_switch" type="checkbox"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="ddcui_cells_title">表单</div>
+		<div class="ddcui_cells ddcui_cells_form">
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><label class="ddcui_label">qq</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" pattern="[0-9]*" placeholder="请输入qq号"/>
+				</div>
+			</div>
+			<div class="ddcui_cell ddcui_vcode">
+				<div class="ddcui_cell_hd"><label class="ddcui_label">验证码</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" placeholder="请输入验证码"/>
+				</div>
+				<div class="ddcui_cell_ft">
+					<img src="./images/vcode.jpg" />
+				</div>
+			</div>
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><label class="ddcui_label">银行卡</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" pattern="[0-9]*" placeholder="请输入银行卡号"/>
+				</div>
+			</div>
+			<div class="ddcui_cell ddcui_vcode ddcui_cell_warn">
+				<div class="ddcui_cell_hd"><label class="ddcui_label">验证码</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" placeholder="请输入验证码"/>
+				</div>
+				<div class="ddcui_cell_ft">
+					<i class="ddcui_icon_warn"></i>
+					<img src="./images/vcode.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="ddcui_cells_tips">底部说明文字底部说明文字</div>
+		<div class="ddcui_btn_area">
+			<a class="ddcui_btn ddcui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+		</div>
+
+		<div class="ddcui_cells_title">上传</div>
+		<div class="ddcui_cells ddcui_cells_form">
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<div class="ddcui_uploader">
+						<div class="ddcui_uploader_hd ddcui_cell">
+							<div class="ddcui_cell_bd ddcui_cell_primary">图片上传</div>
+							<div class="ddcui_cell_ft">0/2</div>
+						</div>
+						<div class="ddcui_uploader_bd">
+							<ul class="ddcui_uploader_files">
+								<li class="ddcui_uploader_file" style="background-image:url(images/ddc.png)"></li>
+								<li class="ddcui_uploader_file" style="background-image:url(images/ddc.png)"></li>
+								<li class="ddcui_uploader_file" style="background-image:url(images/ddc.png)"></li>
+								<li class="ddcui_uploader_file ddcui_uploader_status" style="background-image:url(images/ddc.png)">
+									<div class="ddcui_uploader_status_content">
+										<i class="ddcui_icon_warn"></i>
+									</div>
+								</li>
+								<li class="ddcui_uploader_file ddcui_uploader_status" style="background-image:url(images/ddc.png)">
+									<div class="ddcui_uploader_status_content">50%</div>
+								</li>
+							</ul>
+							<div class="ddcui_uploader_input_wrp">
+								<input class="ddcui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ddcui_cells_title">文本域</div>
+		<div class="ddcui_cells ddcui_cells_form">
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<textarea class="ddcui_textarea" placeholder="请输入评论" rows="3"></textarea>
+					<div class="ddcui_textarea_counter"><span>0</span>/200</div>
+				</div>
+			</div>
+		</div>
+		<div class="ddcui_toptips ddcui_warn js_tooltips">格式不对</div>
+		<div class="ddcui_cells_title">表单报错</div>
+		<div class="ddcui_cells ddcui_cells_form">
+			<div class="ddcui_cell ddcui_cell_warn">
+				<div class="ddcui_cell_hd"><label for="" class="ddcui_label">卡号</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" pattern="[0-9]*" value="ddcui input error" placeholder="请输入卡号"/>
+				</div>
+				<div class="ddcui_cell_ft">
+					<i class="ddcui_icon_warn"></i>
+				</div>
+			</div>
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><label for="" class="ddcui_label">日期</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<!--<input class="ddcui_input" type="date" value=""/>-->
+					<input class="ddcui_input z-inp" type="text" id="startDate" readonly="readonly"   placeholder="开始时间" value=""/>
+				</div>
+			</div>
+			<div class="ddcui_cell">
+				<div class="ddcui_cell_hd"><label for="" class="ddcui_label">时间</label></div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="datetime-local" value="" placeholder=""/>
+				</div>
+			</div>
+		</div>
+		<div class="ddcui_cells_title">选择</div>
+		<div class="ddcui_cells">
+
+			<div class="ddcui_cell ddcui_cell_select ddcui_select_before">
+				<div class="ddcui_cell_hd">
+					<select class="ddcui_select" name="select2">
+						<option value="1">+86</option>
+						<option value="2">+80</option>
+						<option value="3">+84</option>
+						<option value="4">+87</option>
+					</select>
+				</div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<input class="ddcui_input" type="number" pattern="[0-9]*" placeholder="请输入号码"/>
+				</div>
+			</div>
+		</div>
+		<div class="ddcui_cells_title">选择</div>
+		<div class="ddcui_cells">
+			<div class="ddcui_cell ddcui_cell_select">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<select class="ddcui_select" name="select1">
+						<option selected="" value="1">微信号</option>
+						<option value="2">QQ号</option>
+						<option value="3">Email</option>
+					</select>
+				</div>
+			</div>
+			<div class="ddcui_cell ddcui_cell_select ddcui_select_after">
+				<div class="ddcui_cell_hd">
+					<label for="" class="ddcui_label">国家/地区</label>
+				</div>
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<select class="ddcui_select" name="select2">
+						<option value="1">中国</option>
+						<option value="2">美国</option>
+						<option value="3">英国</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_toast">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Toast</h1>
+	</div>
+	<div class="bd spacing">
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="showToast">点击弹出Toast</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="showLoadingToast">点击弹出Loading Toast</a>
+	</div>
+	<!--BEGIN toast-->
+	<div id="toast" style="display: none;">
+		<div class="ddcui_mask_transparent"></div>
+		<div class="ddcui_toast">
+			<i class="ddcui_icon_toast"></i>
+			<p class="ddcui_toast_content">已完成</p>
+		</div>
+	</div>
+	<!--end toast-->
+
+	<!-- loading toast -->
+	<div id="loadingToast" class="ddcui_loading_toast" style="display:none;">
+		<div class="ddcui_mask_transparent"></div>
+		<div class="ddcui_toast">
+			<div class="ddcui_loading">
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_0"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_1"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_2"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_3"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_4"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_5"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_6"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_7"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_8"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_9"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_10"></div>
+				<div class="ddcui_loading_leaf ddcui_loading_leaf_11"></div>
+			</div>
+			<p class="ddcui_toast_content">数据加载中</p>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_dialog">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Dialog</h1>
+	</div>
+	<div class="bd spacing">
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="showDialog1">点击弹出Dialog样式一</a>
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="showDialog2">点击弹出Dialog样式二</a>
+	</div>
+	<!--BEGIN dialog1-->
+	<div class="ddcui_dialog_confirm" id="dialog1" style="display: none;">
+		<div class="ddcui_mask"></div>
+		<div class="ddcui_dialog">
+			<div class="ddcui_dialog_hd"><strong class="ddcui_dialog_title">弹窗标题</strong></div>
+			<div class="ddcui_dialog_bd">自定义弹窗内容，居左对齐显示，告知需要确认的信息等</div>
+			<div class="ddcui_dialog_ft">
+				<a href="javascript:;" class="ddcui_btn_dialog default">取消</a>
+				<a href="javascript:;" class="ddcui_btn_dialog primary">确定</a>
+			</div>
+		</div>
+	</div>
+	<!--END dialog1-->
+	<!--BEGIN dialog2-->
+	<div class="ddcui_dialog_alert" id="dialog2" style="display: none;">
+		<div class="ddcui_mask"></div>
+		<div class="ddcui_dialog">
+			<div class="ddcui_dialog_hd"><strong class="ddcui_dialog_title">弹窗标题</strong></div>
+			<div class="ddcui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+			<div class="ddcui_dialog_ft">
+				<a href="javascript:;" class="ddcui_btn_dialog primary">确定</a>
+			</div>
+		</div>
+	</div>
+	<!--END dialog2-->
+	</script>
+	
+    <script type="text/html" id="tpl_progress">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Progress</h1>
+	</div>
+	<div class="bd spacing">
+		<div class="ddcui_progress">
+			<div class="ddcui_progress_bar">
+				<div class="ddcui_progress_inner_bar js_progress" style="width: 0%;"></div>
+			</div>
+			<a href="javascript:;" class="ddcui_progress_opr">
+				<i class="ddcui_icon_cancel"></i>
+			</a>
+		</div>
+		<br>
+		<div class="ddcui_progress">
+			<div class="ddcui_progress_bar">
+				<div class="ddcui_progress_inner_bar js_progress" style="width: 50%;"></div>
+			</div>
+			<a href="javascript:;" class="ddcui_progress_opr">
+				<i class="ddcui_icon_cancel"></i>
+			</a>
+		</div>
+		<br>
+		<div class="ddcui_progress">
+			<div class="ddcui_progress_bar">
+				<div class="ddcui_progress_inner_bar js_progress" style="width: 80%;"></div>
+			</div>
+			<a href="javascript:;" class="ddcui_progress_opr">
+				<i class="ddcui_icon_cancel"></i>
+			</a>
+		</div>
+		<div class="ddcui_btn_area">
+			<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="btnStartProgress">上传</a>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_msg">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="ddcui_msg">
+		<div class="ddcui_icon_area"><i class="ddcui_icon_success ddcui_icon_msg"></i></div>
+		<div class="ddcui_text_area">
+			<h2 class="ddcui_msg_title">操作成功</h2>
+			<p class="ddcui_msg_desc">内容详情，可根据实际需要安排</p>
+		</div>
+		<div class="ddcui_opr_area">
+			<p class="ddcui_btn_area">
+				<a href="javascript:;" class="ddcui_btn ddcui_btn_primary">确定</a>
+				<a href="javascript:;" class="ddcui_btn ddcui_btn_default">取消</a>
+			</p>
+		</div>
+		<div class="ddcui_extra_area">
+			<a href="">查看详情</a>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_article">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Article</h1>
+	</div>
+	<div class="bd">
+		<article class="ddcui_article">
+			<h1>大标题</h1>
+			<section>
+				<h2 class="title">章标题</h2>
+				<section>
+					<h3>1.1 节标题</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute</p>
+					<p>
+						<img src="./images/pic_article.png" alt="">
+						<img src="./images/pic_article.png" alt="">
+					</p>
+				</section>
+				<section>
+					<h3>1.2 节标题</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section>
+			</section>
+		</article>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_tab">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="bd">
+		<div class="ddcui_cells_title">Tab</div>
+		<div class="ddcui_cells ddcui_cells_access">
+			<a class="ddcui_cell" href="#/navbar">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>navbar</p>
+				</div>
+				<div class="ddcui_cell_ft">
+				</div>
+			</a>
+			<a class="ddcui_cell" href="#/tabbar">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>tabbar</p>
+				</div>
+				<div class="ddcui_cell_ft">
+				</div>
+			</a>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_navbar">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="bd" style="height: 100%;">
+		<div class="ddcui_tab">
+			<div class="ddcui_navbar">
+				<div class="ddcui_navbar_item ddcui_bar_item_on">
+					选项一
+				</div>
+				<div class="ddcui_navbar_item">
+					选项二
+				</div>
+				<div class="ddcui_navbar_item">
+					选项三
+				</div>
+			</div>
+			<div class="ddcui_tab_bd">
+
+			</div>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_tabbar">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="ddcui_tab">
+		<div class="ddcui_tab_bd">
+
+		</div>
+		<div class="ddcui_tabbar">
+			<a href="javascript:;" class="ddcui_tabbar_item ddcui_bar_item_on">
+				<div class="ddcui_tabbar_icon">
+					<img src="./images/icon_nav_button.png" alt="">
+				</div>
+				<p class="ddcui_tabbar_label">微信</p>
+			</a>
+			<a href="javascript:;" class="ddcui_tabbar_item">
+				<div class="ddcui_tabbar_icon">
+					<img src="./images/icon_nav_msg.png" alt="">
+				</div>
+				<p class="ddcui_tabbar_label">通讯录</p>
+			</a>
+			<a href="javascript:;" class="ddcui_tabbar_item">
+				<div class="ddcui_tabbar_icon">
+					<img src="./images/icon_nav_article.png" alt="">
+				</div>
+				<p class="ddcui_tabbar_label">发现</p>
+			</a>
+			<a href="javascript:;" class="ddcui_tabbar_item">
+				<div class="ddcui_tabbar_icon">
+					<img src="./images/icon_nav_cell.png" alt="">
+				</div>
+				<p class="ddcui_tabbar_label">我</p>
+			</a>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_panel">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Panel</h1>
+	</div>
+	<div class="bd">
+		<div class="ddcui_panel ddcui_panel_access">
+			<div class="ddcui_panel_hd">图文组合列表</div>
+			<div class="ddcui_panel_bd">
+				<a href="javascript:void(0);" class="ddcui_media_box ddcui_media_appmsg">
+					<div class="ddcui_media_hd">
+						<img class="ddcui_media_appmsg_thumb" src="images/ddc.png" alt="">
+					</div>
+					<div class="ddcui_media_bd">
+						<h4 class="ddcui_media_title">标题一</h4>
+						<p class="ddcui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="ddcui_media_box ddcui_media_appmsg">
+					<div class="ddcui_media_hd">
+						<img class="ddcui_media_appmsg_thumb" src="images/ddc.png" alt="">
+					</div>
+					<div class="ddcui_media_bd">
+						<h4 class="ddcui_media_title">标题二</h4>
+						<p class="ddcui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+					</div>
+				</a>
+			</div>
+			<a class="ddcui_panel_ft" href="javascript:void(0);">查看更多</a>
+		</div>
+		<div class="ddcui_panel ddcui_panel_access">
+			<div class="ddcui_panel_hd">文字组合列表</div>
+			<div class="ddcui_panel_bd">
+				<div class="ddcui_media_box ddcui_media_text">
+					<h4 class="ddcui_media_title">标题一</h4>
+					<p class="ddcui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+				</div>
+				<div class="ddcui_media_box ddcui_media_text">
+					<h4 class="ddcui_media_title">标题二</h4>
+					<p class="ddcui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="ddcui_panel_ft">查看更多</a>
+		</div>
+		<div class="ddcui_panel">
+			<div class="ddcui_panel_hd">小图文组合列表</div>
+			<div class="ddcui_panel_bd">
+				<div class="ddcui_media_box ddcui_media_small_appmsg">
+					<div class="ddcui_cells ddcui_cells_access">
+						<a class="ddcui_cell" href="javascript:;">
+							<div class="ddcui_cell_hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+							<div class="ddcui_cell_bd ddcui_cell_primary">
+								<p>文字标题</p>
+							</div>
+							<span class="ddcui_cell_ft"></span>
+						</a>
+						<a class="ddcui_cell" href="javascript:;">
+							<div class="ddcui_cell_hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width:20px;margin-right:5px;display:block"></div>
+							<div class="ddcui_cell_bd ddcui_cell_primary">
+								<p>文字标题</p>
+							</div>
+							<span class="ddcui_cell_ft"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ddcui_panel">
+			<div class="ddcui_panel_hd">文字列表附来源</div>
+			<div class="ddcui_panel_bd">
+				<div class="ddcui_media_box ddcui_media_text">
+					<h4 class="ddcui_media_title">标题一</h4>
+					<p class="ddcui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+					<ul class="ddcui_media_info">
+						<li class="ddcui_media_info_meta">文字来源</li>
+						<li class="ddcui_media_info_meta">时间</li>
+						<li class="ddcui_media_info_meta ddcui_media_info_meta_extra">其它信息</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_actionsheet">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">ActionSheet</h1>
+	</div>
+	<div class="bd spacing">
+		<a href="javascript:;" class="ddcui_btn ddcui_btn_primary" id="showActionSheet">点击上拉ActionSheet</a>
+	</div>
+	<!--BEGIN actionSheet-->
+	<div id="actionSheet_wrap">
+		<div class="ddcui_mask_transition" id="mask"></div>
+		<div class="ddcui_actionsheet" id="ddcui_actionsheet">
+			<div class="ddcui_actionsheet_menu">
+				<div class="ddcui_actionsheet_cell">示例菜单</div>
+				<div class="ddcui_actionsheet_cell">示例菜单</div>
+				<div class="ddcui_actionsheet_cell">示例菜单</div>
+				<div class="ddcui_actionsheet_cell">示例菜单</div>
+			</div>
+			<div class="ddcui_actionsheet_action">
+				<div class="ddcui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+			</div>
+		</div>
+	</div>
+	<!--END actionSheet-->
+	</script>
+	
+    <script type="text/html" id="tpl_icons">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">Icons</h1>
+	</div>
+	<div class="bd spacing">
+		<i class="ddcui_icon_msg ddcui_icon_success"></i>
+		<i class="ddcui_icon_msg ddcui_icon_info"></i>
+		<i class="ddcui_icon_msg ddcui_icon_warn"></i>
+		<i class="ddcui_icon_msg ddcui_icon_waiting"></i>
+		<i class="ddcui_icon_safe ddcui_icon_safe_success"></i>
+		<i class="ddcui_icon_safe ddcui_icon_safe_warn"></i>
+		<div class="icon_sp_area">
+			<i class="ddcui_icon_success"></i>
+			<i class="ddcui_icon_success_circle"></i>
+			<i class="ddcui_icon_success_no_circle"></i>
+			<i class="ddcui_icon_info"></i>
+			<i class="ddcui_icon_waiting"></i>
+			<i class="ddcui_icon_waiting_circle"></i>
+			<i class="ddcui_icon_circle"></i>
+			<i class="ddcui_icon_warn"></i>
+			<i class="ddcui_icon_download"></i>
+			<i class="ddcui_icon_info_circle"></i>
+			<i class="ddcui_icon_cancel"></i>
+			<i class="ddcui_icon_search"></i>
+			<i class="ddcui_icon_clear"></i>
+		</div>
+	</div>
+	</script>
+	
+    <script type="text/html" id="tpl_searchbar">
+	<a onclick="history.go(-1)" value="back" class="nav">返回上一页</a>
+	<div class="hd">
+		<h1 class="page_title">searchBar</h1>
+	</div>
+	<div class="bd">
+		<!--<a href="javascript:;" class="ddcui_btn ddcui_btn_primary">点击展现searchBar</a>-->
+		<div class="ddcui_search_bar" id="search_bar">
+			<form class="ddcui_search_outer">
+				<div class="ddcui_search_inner">
+					<i class="ddcui_icon_search"></i>
+					<input type="search" class="ddcui_search_input" id="search_input" placeholder="搜索" required/>
+					<a href="javascript:" class="ddcui_icon_clear" id="search_clear"></a>
+				</div>
+				<label for="search_input" class="ddcui_search_text" id="search_text">
+					<i class="ddcui_icon_search"></i>
+					<span>搜索</span>
+				</label>
+			</form>
+			<a href="javascript:" class="ddcui_search_cancel" id="search_cancel">取消</a>
+		</div>
+
+		<!--推荐标签start-->
+		<div class="ddcui_cells ddcui_cells_access search_show" id="search_show">
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签1</p>
+				</div>
+			</div>
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签2</p>
+				</div>
+			</div>
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签3</p>
+				</div>
+			</div>
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签4</p>
+				</div>
+			</div>
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签5</p>
+				</div>
+			</div>
+			<div class="ddcui_cell tt">
+				<div class="ddcui_cell_bd ddcui_cell_primary">
+					<p>标签6</p>
+				</div>
+			</div>
+		</div>
+		<!--推荐标签end-->
+
+		<!--搜索结果start-->
+		<div class="search_result" id="search_result" style="display:none;">
+			<i class="search_line"></i>
+			<span>没有找到相关结果</span>
+		</div>
+		<!--搜索结果end-->
+
+	</div>
+	</script>
+	
+    <script src="js/zepto.min.js"></script>
+    <script src="js/router.min.js"></script>
+    <script src="js/example.js"></script>
+
+</body></html>
